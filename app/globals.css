@@ -1,0 +1,137 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* Motion Lagree Studio - Premium Boutique Fitness */
+:root {
+  /* Brand Colors */
+  --minimal-mist: #F7F2ED;
+  --clouded-pearl: #E4D7C8;
+  --balanced-beige: #B8A89B;
+  --balanced-brick: #C46A4A;
+  --midnight-moss: #2D2E28;
+  
+  /* Semantic Tokens */
+  --background: #F7F2ED;
+  --foreground: #2D2E28;
+  --card: #FFFFFF;
+  --card-foreground: #2D2E28;
+  --popover: #FFFFFF;
+  --popover-foreground: #2D2E28;
+  --primary: #C46A4A;
+  --primary-foreground: #FFFFFF;
+  --secondary: #E4D7C8;
+  --secondary-foreground: #2D2E28;
+  --muted: #F7F2ED;
+  --muted-foreground: #7A7168;
+  --accent: #B8A89B;
+  --accent-foreground: #2D2E28;
+  --destructive: #C46A4A;
+  --destructive-foreground: #FFFFFF;
+  --border: #E4D7C8;
+  --input: #E4D7C8;
+  --ring: #C46A4A;
+  --radius: 0.25rem;
+}
+
+@theme inline {
+  --font-sans: 'DM Sans', 'DM Sans Fallback', sans-serif;
+  --font-serif: 'Playfair Display', 'Playfair Display Fallback', serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback', monospace;
+  
+  /* Brand Colors */
+  --color-minimal-mist: var(--minimal-mist);
+  --color-clouded-pearl: var(--clouded-pearl);
+  --color-balanced-beige: var(--balanced-beige);
+  --color-balanced-brick: var(--balanced-brick);
+  --color-midnight-moss: var(--midnight-moss);
+  
+  /* Semantic Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight text-balance;
+  }
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+/* Elegant Animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
