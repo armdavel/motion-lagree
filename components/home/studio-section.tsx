@@ -33,8 +33,8 @@ export function StudioSection() {
           </div>
           <div className="relative aspect-square">
             <Image
-              src="/images/landing/method-dsc03127.webp"
-              alt="Woman stretching in a white workout set"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gfsd-bLDae8AJUfOcglNchnWSKrbrrl1nkY.jpg"
+              alt="Close-up of reformer machine hardware and wood detail"
               fill
               className="object-cover rounded-sm"
             />

@@ -17,20 +17,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: 'Motion Lagree Studio | Intentional Movement, Lasting Strength',
-  description:
-    'Join the founding list for Motion Lagree Studio and get opening details plus early access to special founding rates.',
-  keywords: [
-    'Lagree',
-    'Lagree Fitness',
-    'boutique fitness',
-    'strength training',
-    'Megaformer',
-    'founding list',
-  ],
+  description: 'A boutique Lagree studio where slow, controlled, high-intensity movement builds lasting strength, confidence, and community. Book your first class today.',
+  keywords: ['Lagree', 'Pilates', 'boutique fitness', 'strength training', 'reformer', 'mindful movement'],
   openGraph: {
     title: 'Motion Lagree Studio',
-    description:
-      'Move with intention. Build lasting strength. Join the founding list for opening details and special rates.',
+    description: 'Intentional movement. Lasting strength. A premium boutique fitness experience.',
     type: 'website',
   },
 }
