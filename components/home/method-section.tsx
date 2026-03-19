@@ -6,22 +6,19 @@ import { ArrowRight } from 'lucide-react'
 const methodBenefits = [
   {
     title: 'Slow & Controlled',
-    description:
-      'Slow, controlled movement keeps your muscles working longer with no momentum, creating deeper muscle engagement.',
+    description: 'Movements are performed slowly to maximize muscle engagement and minimize momentum.',
   },
   {
-    title: 'High-Intensity, Low-Impact',
-    description: 'Expect muscle fatigue and a challenge without stressing your joints.',
+    title: 'High Intensity',
+    description: 'Low-impact yet challenging, the Megaformer creates constant tension for deep muscle fatigue.',
   },
   {
-    title: 'Time Under Tension',
-    description:
-      'Time under tension keeps muscles engaged longer during each movement to maximize muscle activation.',
+    title: 'Full Body',
+    description: 'Every class works your entire body, building balanced strength and endurance.',
   },
   {
-    title: 'Full-Body Results',
-    description:
-      'Multiple muscle groups work together to build strength, core stability, endurance, flexibility, and balance in one efficient workout.',
+    title: 'Joint-Conscious',
+    description: 'The spring-based resistance is gentle on joints while still delivering powerful results.',
   },
 ]
 
@@ -34,8 +31,8 @@ export function MethodSection() {
           <div className="relative">
             <div className="relative aspect-[4/5]">
               <Image
-                src="/images/landing/method-dsc03127.webp"
-                alt="Woman stretching in a white workout set"
+                src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=2069&auto=format&fit=crop"
+                alt="Close-up of hands gripping the Megaformer during a Lagree workout"
                 fill
                 className="object-cover rounded-sm"
               />
@@ -43,9 +40,7 @@ export function MethodSection() {
             {/* Accent Box */}
             <div className="absolute -bottom-8 -right-8 bg-balanced-brick p-8 rounded-sm hidden lg:block">
               <p className="font-serif text-2xl text-white leading-snug">
-                Slow control.
-                <br />
-                Strong results.
+                40+ muscles<br />engaged at once
               </p>
             </div>
           </div>
@@ -53,18 +48,17 @@ export function MethodSection() {
           {/* Content */}
           <div>
             <p className="text-balanced-brick font-medium tracking-widest text-sm uppercase mb-4">
-              The Method
+              The Lagree Method
             </p>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-midnight-moss leading-tight">
-              What is <span className="italic">Lagree?</span>
+              Where Slow Meets{' '}
+              <span className="italic">Strong</span>
             </h2>
             <p className="mt-6 text-midnight-moss/70 leading-relaxed">
-              Lagree is a high-intensity, low-impact, full-body workout performed on the
-              Megaformer. Through slow, controlled movements and constant muscle tension,
-              it engages hundreds of muscles at once to build strength, core stability,
-              endurance, flexibility, and balance. Built on principles of bodybuilding,
-              the Lagree Method creates deep muscular activation while minimizing stress on
-              the joints.
+              The Lagree Method is a revolutionary approach to fitness that combines strength, 
+              cardio, and flexibility training on the patented Megaformer. Unlike traditional 
+              workouts, Lagree emphasizes slow, controlled movements that create constant muscle 
+              tension for maximum results.
             </p>
 
             <div className="mt-10 grid sm:grid-cols-2 gap-8">
