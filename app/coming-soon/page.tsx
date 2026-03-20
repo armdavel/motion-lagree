@@ -23,95 +23,100 @@ export default function ComingSoonPage() {
   }
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="overflow-x-hidden bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col overflow-hidden">
+      <section className="relative min-h-screen overflow-hidden bg-midnight-moss text-minimal-mist">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-              src="/images/landing/hero-dsc02946.webp"
-              alt="Woman in white workout set performing a seated side stretch on a Megaformer reformer in a serene studio"
+            src="/images/landing/hero-dsc02946.webp"
+            alt="Woman in white workout set performing a seated side stretch on a Megaformer reformer in a serene studio"
             fill
-            className="object-cover"
+            sizes="100vw"
+            className="object-cover object-center"
             priority
           />
           <div className="absolute inset-0 bg-midnight-moss/60" />
-          <div className="absolute inset-0 bg-gradient-to-b from-midnight-moss/80 via-transparent to-midnight-moss/90" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(45,46,40,0.72)_0%,rgba(45,46,40,0.10)_42%,rgba(45,46,40,0.92)_100%),linear-gradient(90deg,rgba(45,46,40,0.40)_0%,transparent_50%,rgba(45,46,40,0.40)_100%)]" />
         </div>
-        
-        {/* Minimal Header */}
-        <header className="relative z-10 w-full px-6 md:px-12 py-6 flex items-center">
-          <div className="relative h-12 w-40">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-CDmtFBx9LVXxGuDSNF7uKJgwNp2cEj.png"
-              alt="Motion Lagree Studio"
-              fill
-              className="object-contain object-left"
-              priority
-            />
-          </div>
-        </header>
 
-        {/* Main Content */}
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 md:px-12 pb-12">
-          <div className="max-w-3xl mx-auto text-center">
-            {/* Coming Soon Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-minimal-mist/10 backdrop-blur-sm border border-minimal-mist/20 rounded-full mb-8 animate-fade-in">
-              <span className="w-2 h-2 bg-balanced-brick rounded-full animate-pulse" />
-              <span className="text-sm font-medium tracking-wide uppercase text-minimal-mist/90">
-                Opening Soon
-              </span>
+        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[78rem] flex-col px-6 pb-8 pt-5 md:px-12 md:pb-10 md:pt-6">
+          {/* Minimal Header */}
+          <header className="flex items-center">
+            <div className="relative h-12 w-40">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-CDmtFBx9LVXxGuDSNF7uKJgwNp2cEj.png"
+                alt="Motion Lagree Studio"
+                fill
+                className="object-contain object-left"
+                priority
+              />
+            </div>
+          </header>
+
+          {/* Main Content */}
+          <div className="flex flex-1 flex-col items-center justify-center py-6 text-center md:py-8">
+            <div className="mx-auto max-w-3xl">
+              {/* Coming Soon Badge */}
+              <div className="inline-flex items-center gap-2 rounded-full border border-minimal-mist/20 bg-minimal-mist/10 px-4 py-2 backdrop-blur-sm animate-fade-in">
+                <span className="h-2 w-2 rounded-full bg-balanced-brick animate-pulse" />
+                <span className="text-sm font-medium tracking-[0.18em] uppercase text-minimal-mist/90">
+                  Opening Soon
+                </span>
+              </div>
+
+              {/* Main Headline */}
+              <h1 className="mt-6 font-serif text-4xl font-medium leading-[1.1] tracking-[-0.045em] text-minimal-mist animate-fade-up sm:text-5xl md:text-6xl lg:text-7xl">
+                Move with intention.
+                <span className="block text-balanced-brick">Build lasting strength.</span>
+              </h1>
+
+              {/* Subheadline */}
+              <p className="mx-auto mt-5 max-w-2xl text-lg leading-[1.8] text-minimal-mist/80 animate-fade-up animation-delay-100 md:text-xl">
+                A premium Lagree Fitness studio for those who want more than just another workout. Experience a high-intensity, low-impact, full-body workout that strengthens and challenges both body and mind, leaving you coming back for more.
+              </p>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-medium leading-[1.1] mb-6 text-minimal-mist animate-fade-up">
-              Move with intention.{" "}
-              <span className="text-balanced-brick">Build lasting strength.</span>
-            </h1>
-
-            {/* Subheadline */}
-            <p className="text-lg md:text-xl text-minimal-mist/80 max-w-xl mx-auto mb-12 animate-fade-up animation-delay-100">
-              A premium Lagree Fitness studio for those who want more than just another workout. Experience a high-intensity, low-impact, full-body workout that strengthens and challenges both body and mind, leaving you coming back for more.
-            </p>
-
             {/* Waitlist Form */}
-            <div className="max-w-sm mx-auto animate-fade-up animation-delay-200">
+            <div className="mt-9 w-full max-w-[38rem] animate-fade-up animation-delay-200">
               {!isSubmitted ? (
-                <form onSubmit={handleSubmit} className="space-y-3">
-                  <p className="text-sm text-minimal-mist/60">
-                    Join the Founding List for opening details and early access to special rates
-                  </p>
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="w-full h-12 bg-minimal-mist/10 backdrop-blur-sm border-minimal-mist/20 text-minimal-mist placeholder:text-minimal-mist/50 focus:ring-balanced-brick focus:border-balanced-brick"
-                  />
-                  <Button 
-                    type="submit" 
-                    disabled={isLoading}
-                    className="w-full h-12 px-6 bg-balanced-brick hover:bg-balanced-brick/90 text-white font-medium"
-                  >
-                    {isLoading ? (
-                      "Joining..."
-                    ) : (
-                      <>
-                        Join the Founding List
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </>
-                    )}
-                  </Button>
-                </form>
+                <div className="rounded-[1.7rem] border border-minimal-mist/20 bg-[rgba(57,58,52,0.78)] p-5 shadow-[0_20px_45px_rgba(17,17,15,0.25)] backdrop-blur-md md:px-8 md:pb-7 md:pt-8">
+                  <form onSubmit={handleSubmit} className="grid gap-4">
+                    <p className="text-center text-base leading-[1.5] text-minimal-mist/80 md:text-[1.12rem]">
+                      Join the Founding List for opening details and early access to special rates
+                    </p>
+                    <Input
+                      type="email"
+                      placeholder="Enter your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      className="h-auto min-h-[3.85rem] rounded-[0.9rem] border-minimal-mist/20 bg-minimal-mist/10 px-6 text-minimal-mist placeholder:text-minimal-mist/50 focus-visible:border-balanced-brick focus-visible:ring-balanced-brick/25"
+                    />
+                    <Button
+                      type="submit"
+                      disabled={isLoading}
+                      className="h-auto min-h-[3.9rem] rounded-[0.9rem] bg-balanced-brick text-white shadow-none hover:bg-[#b35d3e]"
+                    >
+                      {isLoading ? (
+                        "Joining..."
+                      ) : (
+                        <>
+                          Join the Founding List
+                          <ArrowRight className="ml-1 h-4 w-4" />
+                        </>
+                      )}
+                    </Button>
+                  </form>
+                </div>
               ) : (
-                <div className="flex flex-col items-center gap-4 p-6 bg-minimal-mist/10 backdrop-blur-sm border border-minimal-mist/20 rounded-lg">
-                  <div className="w-12 h-12 bg-balanced-brick/20 rounded-full flex items-center justify-center">
+                <div className="flex gap-4 rounded-[1.7rem] border border-minimal-mist/20 bg-[rgba(57,58,52,0.78)] p-6 text-left shadow-[0_20px_45px_rgba(17,17,15,0.25)] backdrop-blur-md">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-balanced-brick/20">
                     <Check className="h-6 w-6 text-balanced-brick" />
                   </div>
-                  <div className="text-center">
-                    <p className="font-medium text-minimal-mist mb-1">{"You're on the list!"}</p>
-                    <p className="text-sm text-minimal-mist/70">
+                  <div>
+                    <p className="mb-1 font-medium text-minimal-mist">{"You're on the list!"}</p>
+                    <p className="text-sm leading-relaxed text-minimal-mist/70">
                       {"We'll be in touch soon with exclusive updates and early access details."}
                     </p>
                   </div>
@@ -119,12 +124,12 @@ export default function ComingSoonPage() {
               )}
             </div>
           </div>
-        </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute z-10 bottom-8 left-0 right-0 flex justify-center animate-bounce">
-          <div className="w-6 h-10 border-2 border-minimal-mist/30 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-2 bg-minimal-mist/50 rounded-full" />
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-0 right-0 hidden justify-center md:flex">
+            <div className="flex h-10 w-6 justify-center rounded-full border-2 border-minimal-mist/30 pt-2 animate-bounce">
+              <div className="h-2 w-1 rounded-full bg-minimal-mist/50" />
+            </div>
           </div>
         </div>
       </section>
